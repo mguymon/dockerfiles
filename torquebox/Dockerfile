@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.7.1
 
 FROM stackbrew/ubuntu:13.04
-MAINTAINER Michael Guymon, mguymon@igicom.com
+MAINTAINER Michael Guymon, michael@tobedevoured.com
 
 #
 # Torquebox
