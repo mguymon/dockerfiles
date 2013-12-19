@@ -1,6 +1,6 @@
 # DOCKER-VERSION 0.7.1
 
-FROM ubuntu:13.04
+FROM stackbrew/ubuntu:13.04
 MAINTAINER Michael Guymon, michael@tobedevoured.com
 
 RUN echo deb http://archive.ubuntu.com/ubuntu raring main universe multiverse > /etc/apt/sources.list
