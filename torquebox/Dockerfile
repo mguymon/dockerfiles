@@ -6,6 +6,8 @@ MAINTAINER Michael Guymon, michael@tobedevoured.com
 #
 # Torquebox
 #
+
+# Moved to script to help fight AUF 42 parent max
 ADD apt.sh /apt.sh
 RUN chmod u+x /apt.sh && sh /apt.sh
 
