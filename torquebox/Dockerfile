@@ -26,7 +26,7 @@ ADD start_torquebox.sh /opt/torquebox/start_torquebox.sh
 RUN chown -R torquebox:torquebox /opt/torquebox && chmod u+x /opt/torquebox/start_torquebox.sh
 
 # Docker VOLUME hates symlinks
-VOLUME ["/opt/torquebox/torquebox-3.0.1/jboss/standalone/log", "/opt/torquebox/torquebox-3.0.1/jboss/standalone/deployments"]
+VOLUME ["/opt/torquebox/torquebox-3.0.1/jboss/standalone/log", "/opt/torquebox/torquebox-3.0.1/jboss/standalone/data", "/opt/torquebox/torquebox-3.0.1/jboss/standalone/deployments"]
 
 EXPOSE 6666 8080 8443 5445 8675 8676
 
