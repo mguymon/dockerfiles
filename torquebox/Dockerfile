@@ -1,6 +1,6 @@
 # DOCKER-VERSION 0.10.0
 
-FROM stackbrew/ubuntu:13.04
+FROM stackbrew/ubuntu:14.04
 MAINTAINER Michael Guymon, michael@tobedevoured.com
 
 #
