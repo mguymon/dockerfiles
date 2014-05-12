@@ -7,9 +7,14 @@ MAINTAINER Michael Guymon, michael@tobedevoured.com
 # Torquebox
 #
 
-# Moved to script to help fight AUF 42 parent max
-ADD apt.sh /apt.sh
-RUN chmod u+x /apt.sh && sh /apt.sh
+# Install deps
+RUN echo deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:webupd8team/java -y
+RUN apt-get update
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+RUN apt-get install -y unzip wget
 
 RUN mkdir -p /opt/torquebox/applications && useradd torquebox -c"Torquebox system user" -M -ptorquebox
 
