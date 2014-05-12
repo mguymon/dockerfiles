@@ -2,7 +2,7 @@
 
 # move to own script to fight the AUF 42 parent max
 
-echo deb http://archive.ubuntu.com/ubuntu raring main universe multiverse > /etc/apt/sources.list
+echo deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse > /etc/apt/sources.list
 apt-get update && apt-get install -y software-properties-common 
 add-apt-repository ppa:webupd8team/java -y 
 apt-get update
