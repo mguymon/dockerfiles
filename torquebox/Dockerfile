@@ -16,10 +16,10 @@ RUN apt-get update
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN apt-get install -y unzip wget
 
-RUN mkdir -p /opt/torquebox/applications && useradd torquebox -c"Torquebox system user" -M -ptorquebox
-
 # Unzip the TB
 RUN wget -O /opt/torquebox-dist-3.1.0-bin.zip http://torquebox.org/release/org/torquebox/torquebox-dist/3.1.0/torquebox-dist-3.1.0-bin.zip && unzip -q /opt/torquebox-dist-3.1.0-bin.zip -d /opt && mv /opt/torquebox-3.1.0 /opt/torquebox
+
+RUN mkdir -p /opt/torquebox/applications && useradd torquebox -c"Torquebox system user" -M -ptorquebox
 
 # Set env for TB
 ENV TORQUEBOX_HOME /opt/torquebox
